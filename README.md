@@ -59,7 +59,6 @@
 </tr>
 </tbody></table>
 <h4> W, A, S, D directions</h4>
-<h4>Upgrades</h4>
 <table>
 <thead>
 <tr>
