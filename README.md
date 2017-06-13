@@ -162,6 +162,51 @@
 <td>10</td>
 </tbody></table>
 
+<h4> Packet 4: (Tank Evolutions)</h4>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Uint8</td>
+<td>Packet ID</td>
+</tr>
+<td>1</td>
+<td>Uint8</td>
+<td>Tank Type</td>
+<tr>
+</tbody></table>
+
+<h4>Tank Evolutions</h4>
+<table>
+<thead>
+<tr>
+<th>Tank Name</th>
+<th>Byte ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Twin</td>
+<td>38</td>
+</tr>
+<td>Tank</td>
+<td>40</td>
+</tr>
+<td>Machine Gun</td>
+<td>42</td>
+</tr>
+<td>Flank Guard</td>
+<td>52</td>
+</tr>
+</tbody></table>
+
 <h2> Serverbound Packets </h2>
 
 <h4>Empty Uint8Array (Sent constantly, maybe for ping)</h4>
