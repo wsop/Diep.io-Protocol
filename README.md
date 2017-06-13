@@ -48,9 +48,45 @@
 </thead>
 <tbody>
 <tr>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>0</td>
+<td>Uint8</td>
+<td>Packet ID</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Uint8</td>
+<td>W, A, S, D directions (see below)</td>
+</tr>
+</tbody></table>
+<h4> W, A, S, D directions</h4>
+<h4>Upgrades</h4>
+<table>
+<thead>
+<tr>
+<th>Movement Key</th>
+<th>Byte ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stop movement (default)</td>
+<td>128</td>
+</tr>
+<tr>
+<td>W</td>
+<td>130</td>
+</tr>
+<tr>
+<td>A</td>
+<td>132</td>
+</tr>
+<tr>
+<td>S</td>
+<td>136</td>
+</tr>
+<tr>
+<td>D</td>
+<td>144</td>
 </tr>
 </tbody></table>
 
