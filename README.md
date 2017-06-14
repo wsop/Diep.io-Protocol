@@ -208,7 +208,7 @@
 <td>Triple Shot</td>
 <td>34</td>
 </tr>
-<td>Gunner</td>[4, 106]
+<td>Gunner</td>
 <td>12</td>
 </tr>
 <td>Autogunner</td>
