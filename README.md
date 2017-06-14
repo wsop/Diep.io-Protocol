@@ -18,6 +18,10 @@
 <td>1</td>
 <td>String</td>
 <td>Nickname</td>
+</tr>
+<td>Last byte</td>
+<td>Uint8</td>
+<td>Packet [0]</td>
 </tbody></table>
 
 <h4> Packet 5: (It is sent every 300ms until you connect a server)</h4>
