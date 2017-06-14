@@ -214,6 +214,9 @@
 <td>Autogunner</td>
 <td>106</td>
 </tr>
+<td>Hunter</td>
+<td>2</td>
+</tr>
 </tbody></table>
 
 <h2> Serverbound Packets </h2>
