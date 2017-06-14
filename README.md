@@ -221,25 +221,6 @@
 
 <h2> Serverbound Packets </h2>
 
-<h4>Empty Uint8Array (Sent constantly, maybe for ping)</h4>
-
-<h4> Packet 1: (Mouse move position)</h4>
-<table>
-<thead>
-<tr>
-<th>Byte Offset</th>
-<th>Data Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>?</td>
-<td>?</td>
-<td>?</td>
-</tr>
-</tbody></table>
-
 <h4> Packet 5: (Server pong)</h4>
 <table>
 <thead>
@@ -254,5 +235,31 @@
 <td>0</td>
 <td>Uint8</td>
 <td>Packet ID</td>
+</tr>
+</tbody></table>
+
+<h4> Packet 0: (Update Nodes)</h4>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Uint8</td>
+<td>Packet ID</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Uint8</td>
+<td>Byte [14] <- Update Leaderboard</td>
+</tr>
+<td>10</td>
+<td>String</td>
+<td>Nickname</td>
 </tr>
 </tbody></table>
