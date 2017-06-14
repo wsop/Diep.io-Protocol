@@ -66,6 +66,10 @@
                 if (buf.readUInt8(1) === 129 || buf.readUInt8(1) === 131 || buf.readUInt8(1) === 133 || buf.readUInt8(1) === 137 || buf.readUInt8(1) === 145) {
                     shoot = true;
                     console.log("Shot");
+                } else {
+                    if (shoot) {
+                        shoot = false;
+                    }
                 }
             }
             if (buf.readUInt8(0) === 3) {
