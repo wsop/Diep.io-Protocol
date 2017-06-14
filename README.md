@@ -208,6 +208,9 @@
 <td>Triple Shot</td>
 <td>34</td>
 </tr>
+<td>Gunner</td>
+<td>12</td>
+</tr>
 </tbody></table>
 
 <h2> Serverbound Packets </h2>
