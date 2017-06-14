@@ -238,6 +238,45 @@
 </tr>
 </tbody></table>
 
+<h4> Packet 7: (Once you connect a server)</h4>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Uint8</td>
+<td>Packet ID</td>
+</tr>
+</tbody></table>
+
+<h4> Packet 4: (Server Info)</h4>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Uint8</td>
+<td>Packet ID</td>
+</tr>
+<tr>
+<td>1</td>
+<td>String</td>
+<td>Server country location</td>
+</tr>
+</tbody></table>
+
 <h4> Packet 0: (Update Nodes)</h4>
 <table>
 <thead>
