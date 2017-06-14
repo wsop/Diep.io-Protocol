@@ -205,6 +205,9 @@
 <td>Flank Guard</td>
 <td>52</td>
 </tr>
+<td>Triple Shot</td>
+<td>34</td>
+</tr>
 </tbody></table>
 
 <h2> Serverbound Packets </h2>
