@@ -69,19 +69,19 @@
 <tbody>
 <tr>
 <td>Stop movement (default)</td>
-<td>128</td>
+<td>128 (+1 if AutoFire is ON)</td>
 </tr>
 <tr>
 <td>W</td>
-<td>130</td>
+<td>130 (+1 if AutoFire is ON)</td>
 </tr>
 <tr>
 <td>A</td>
-<td>132</td>
+<td>132 (+1 if AutoFire is ON)</td>
 </tr>
 <tr>
 <td>S</td>
-<td>136</td>
+<td>136 (+1 if AutoFire is ON)</td>
 </tr>
 <tr>
 <td>D</td>
