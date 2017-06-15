@@ -89,7 +89,7 @@
 </tr>
 <tr>
 <td>D</td>
-<td>144</td>
+<td>144 (+1 if AutoFire is ON)</td>
 </tr>
 </tbody></table>
 
