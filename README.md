@@ -221,7 +221,14 @@
 <td>Hunter</td>
 <td>2</td>
 </tr>
+<td>Auto3</td>
+<td>118</td>
+</tr>
+<td>Auto5</td>
+<td>116</td>
+</tr>
 </tbody></table>
+
 
 <h2> Serverbound Packets </h2>
 
