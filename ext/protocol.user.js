@@ -66,10 +66,6 @@
                 if (buf.readUInt8(1) === 129 || buf.readUInt8(1) === 131 || buf.readUInt8(1) === 133 || buf.readUInt8(1) === 137 || buf.readUInt8(1) === 145) {
                     shoot = true;
                     console.log("Shot");
-                } else {
-                    if (shoot) {
-                        shoot = false;
-                    }
                 }
             }
             if (buf.readUInt8(0) === 3) {
@@ -103,6 +99,40 @@
                     case 14:
                         console.log("Upgraded Bullet Penetration!");
                         skills.BULLET_PENETRATION += 1;
+                }
+            }
+            if (buf.readUInt8(0) === 4) {
+                switch(buf.readUInt8(1)) {
+                    case 2:
+                        console.log("Tank evolved to Hunter!");
+                        break;
+                    case 12:
+                        console.log("Tank evolved to Gunner!");
+                        break;
+                    case 34:
+                        console.log("Tank evolved to Triple Shot!");
+                        break;
+                    case 38:
+                        console.log("Tank evolved to Twin!");
+                        break;
+                    case 40:
+                        console.log("Tank evolved to Tank!");
+                        break;
+                    case 42:
+                        console.log("Tank evolved to Machine Gun!");
+                        break;
+                    case 52:
+                        console.log("Tank evolved to Flank Guard!");
+                        break;
+                    case 106:
+                        console.log("Tank evolved to Autogunner!");
+                        break;
+                    case 116:
+                        console.log("Tank evolved to Auto5!");
+                        break;
+                    case 118:
+                        console.log("Tank evolved to Auto3!");
+                        break;
                 }
             }
         } catch(e) {
