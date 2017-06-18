@@ -284,7 +284,7 @@
 <tr>
 <td>1</td>
 <td>String</td>
-<td>Server country location</td>
+<td>Server country location or gamemode</td>
 </tr>
 </tbody></table>
 
