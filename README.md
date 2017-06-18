@@ -232,7 +232,7 @@
 
 <h2> Serverbound Packets </h2>
 
-<h4> Packet 5: (Server pong)</h4>
+<h4> Packet 5: (Sent while joining a server)</h4>
 <table>
 <thead>
 <tr>
