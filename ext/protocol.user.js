@@ -1,31 +1,54 @@
 // ==UserScript==
 // @name         ![Diep.io Protocol Extension]
 // @require      https://raw.githubusercontent.com/xF4b3r/Diep.io-Protocol/master/ext/Buffer.js
-// @version      0.1
-// @description  try to take over the world!
+// @version      0.3
+// @description  Diep.io WS Protocol Ext
 // @author       Faber
 // @match        http://diep.io/
-// @grant        none
 // ==/UserScript==
 
-(function() {
-    'use strict';
-    window.WebSocket.prototype._send = window.WebSocket.prototype.send;
-    window.WebSocket.prototype.send = function(data) {
-        var global = window;
-        global.Logger = false;
-        global.debugKeys = true;
-        global.shoot = false;
-        global.skills = {
-            BULLET_SPEED: 0,
-            BULLET_PENETRATION: 0,
-            BULLET_DAMAGE: 0,
-            BODY_DAMAGE: 0,
-            MAX_HEALTH: 0,
-            HEALTH_REGEN: 0,
-            MOVEMENT_SPEED: 0
-        };
-        if (Logger) console.log(new Uint8Array(data));
+const global = window;
+global.Logger = false;
+global.Logger = false;
+global.debugKeys = true;
+global.shoot = false;
+global.receivedP5 = false;
+global.skills = {
+    BULLET_SPEED: 0,
+    BULLET_PENETRATION: 0,
+    BULLET_DAMAGE: 0,
+    BODY_DAMAGE: 0,
+    MAX_HEALTH: 0,
+    HEALTH_REGEN: 0,
+    MOVEMENT_SPEED: 0
+};
+
+_WebSocket = window.WebSocket;
+
+function refer(master, slave, prop) {
+    Object.defineProperty(master, prop, {
+        get: function(){
+            return slave[prop];
+        },
+        set: function(val) {
+            slave[prop] = val;
+        },
+        enumerable: true,
+        configurable: true
+    });
+}
+
+window.WebSocket = function(url, protocols) {
+    protocols = undefined === protocols ? [] : 0;
+    var ws = new _WebSocket(url, protocols);
+    refer(this, ws, 'binaryType');
+    refer(this, ws, 'bufferedAmount');
+    refer(this, ws, 'extensions');
+    refer(this, ws, 'protocol');
+    refer(this, ws, 'readyState');
+    refer(this, ws, 'url');
+
+    this.send = function(data) {
         try {
             var buf = new Buffer(data);
             if (buf.readUInt8(0) === 2) {
@@ -138,6 +161,68 @@
         } catch(e) {
             console.log(e);
         }
-        window.WebSocket.prototype._send.apply(this, arguments);
+        return ws.send.call(ws, data);
     };
-})();
+
+    this.close = function() {
+        return ws.close.call(ws);
+    };
+
+    this.onopen = function(event) {};
+    this.onclose = function(event) {};
+    this.onerror = function(event) {};
+    this.onmessage = function(event) {};
+
+    ws.onopen = function(event) {
+        if (this.onopen)
+            return this.onopen.call(ws, event);
+    }.bind(this);
+
+    ws.onmessage = function(event) {
+        var buf = new Buffer(event.data);
+        switch(buf.readUInt8(0)) {
+            case 5:
+                while(!receivedP5) {
+                    console.log("Connecting to server...");
+                    receivedP5 = true;
+                }
+                break;
+            case 7:
+                console.log("Connected to server!");
+                break;
+            case 4:
+                var gm = "";
+                for (var i = 0; i < buf.byteLength; i++) {
+                    gm += String.fromCharCode(buf.readUInt8(i));
+                }
+                var gmm = gm.match(/\w+:(\w+):|\w+-(\w+)\s/i);
+                try {
+                    console.log("Gamemode: " + gmm[1]);
+                } catch(e) {
+                    console.log("Gamemode: FFA");
+                }
+                break;
+            case 0:
+                // Need help decoding this packet
+                /*var xdec = "";
+                for (var d = 0; d < buf.byteLength; d++) {
+                    xdec += String.fromCharCode(buf.readUInt8(d));
+                }
+                console.log(xdec);*/
+        }
+        if (this.onmessage)
+            return this.onmessage.call(ws, event);
+    }.bind(this);
+
+    ws.onclose = function(event) {
+        if (this.onclose)
+            return this.onclose.call(ws, event);
+    }.bind(this);
+
+    ws.onerror = function(event) {
+        if (this.onerror)
+            return this.onerror.call(ws, event);
+    }.bind(this);
+};
+
+window.WebSocket.prototype = _WebSocket;
