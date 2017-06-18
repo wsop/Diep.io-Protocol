@@ -288,7 +288,7 @@
 </tr>
 </tbody></table>
 
-<h4> Packet 0: (Update Nodes)</h4>
+<h4> Packet 0: (Update Nodes) <- need help to decode it xd</h4>
 <table>
 <thead>
 <tr>
@@ -299,17 +299,8 @@
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td>Uint8</td>
-<td>Packet ID</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Uint8</td>
-<td>Byte [14] <- Update Leaderboard</td>
-</tr>
-<td>10</td>
-<td>String</td>
-<td>Nickname</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
 </tr>
 </tbody></table>
