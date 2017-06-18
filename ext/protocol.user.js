@@ -9,7 +9,6 @@
 
 const global = window;
 global.Logger = false;
-global.Logger = false;
 global.debugKeys = true;
 global.shoot = false;
 global.receivedP5 = false;
