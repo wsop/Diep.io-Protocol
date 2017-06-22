@@ -21,7 +21,7 @@
 </tr>
 <td>Last byte</td>
 <td>Uint8</td>
-<td>Packet [0]</td>
+<td>Packet 0</td>
 </tbody></table>
 
 <h4> Packet 5: (It is sent every 300ms until you connect a server)</h4>
@@ -141,7 +141,7 @@
 <tr>
 <td>2</td>
 <td>Uint8</td>
-<td>Packet ID [1]</td>
+<td>Packet 1</td>
 </tbody></table>
 
 <h4>Upgrades</h4>
