@@ -105,8 +105,18 @@
 <tbody>
 <tr>
 <td>0</td>
-<td>Uint16</td>
-<td>Init packet</td>
+<td>Uint8</td>
+<td>Packet ID</td>
+</tr>
+<tr>
+<td>1 to 41</td>
+<td>Uint32</td>
+<td>Unknown hash</td>
+</tr>
+<tr>
+<td>42 to 45</td>
+<td>Uint8</td>
+<td>Packet 0</td>
 </tr>
 </tbody></table>
 
