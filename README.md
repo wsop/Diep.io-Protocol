@@ -293,7 +293,7 @@
 </tr>
 <tr>
 <td>1</td>
-<td>String</td>
+<td>null_utf8</td>
 <td>Server country location or gamemode</td>
 </tr>
 </tbody></table>
