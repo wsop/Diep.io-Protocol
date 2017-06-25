@@ -109,13 +109,13 @@
 <td>Packet ID</td>
 </tr>
 <tr>
-<td>1 to 41</td>
-<td>Uint32</td>
+<td>?</td>
+<td>null_utf8</td>
 <td>Unknown hash</td>
 </tr>
 <tr>
-<td>42 to 45</td>
-<td>Uint8</td>
+<td>?</td>
+<td>Uint32</td>
 <td>Packet 0</td>
 </tr>
 </tbody></table>
