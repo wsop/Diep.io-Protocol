@@ -19,7 +19,7 @@
 <td>null_utf8</td>
 <td>Nickname</td>
 </tr>
-<td>Last byte</td>
+<td>Packet Length</td>
 <td>Uint8</td>
 <td>0</td>
 </tbody></table>
