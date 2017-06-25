@@ -61,6 +61,11 @@
 <td>Uint8</td>
 <td>W, A, S, D directions (see below)</td>
 </tr>
+<tr>
+<td>2</td>
+<td>Uint8</td>
+<td>Byte 16</td>
+</tr>
 </tbody></table>
 <h4> W, A, S, D directions</h4>
 <table>
