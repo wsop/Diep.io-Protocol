@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         !! Diep.io API
-// @require      https://rawgit.com/xF4b3r/Diep.io-Protocol/master/ext/Buffer.js
+// @require      http://rawgit.com/xF4b3r/Diep.io-Protocol/master/API/Buffer.js
 // @version      0.6
 // @description  Diep.io WS Protocol
 // @author       Faber, Gexi
