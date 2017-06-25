@@ -91,6 +91,22 @@
 <td>D</td>
 <td>144 (+1 if AutoFire is ON)</td>
 </tr>
+<tr>
+<td>W && A</td>
+<td>134 (+1 if AutoFire is ON)</td>
+</tr>
+<tr>
+<td>A && S</td>
+<td>140 (+1 if AutoFire is ON)</td>
+</tr>
+<tr>
+<td>S && D</td>
+<td>152 (+1 if AutoFire is ON)</td>
+</tr>
+<tr>
+<td>D && W</td>
+<td>146 (+1 if AutoFire is ON)</td>
+</tr>
 </tbody></table>
 
 <h4> Packet 0: (Init packet, sent if server found)</h4>
