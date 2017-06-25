@@ -24,7 +24,7 @@
 <td>0</td>
 </tbody></table>
 
-<h4> Packet 5: (It is sent every 300ms until you connect a server)</h4>
+<h4> Packet 5: Server Response</h4>
 <table>
 <thead>
 <tr>
@@ -242,7 +242,7 @@
 
 <h2> Serverbound Packets </h2>
 
-<h4> Packet 5: (Sent while joining a server)</h4>
+<h4> Packet 5: (Connection-Keep-Alive)</h4>
 <table>
 <thead>
 <tr>
