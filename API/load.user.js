@@ -9,7 +9,7 @@
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==
 
-const API = "<script src='https://rawgit.com/xF4b3r/Diep.io-Protocol/master/API/protocol.js'></script>";
+const API = "<script src='http://rawgit.com/xF4b3r/Diep.io-Protocol/master/API/protocol.js'></script>";
 
 function loadScript(x) {
     x = x.replace("</body>", API + "</body>");
