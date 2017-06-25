@@ -109,7 +109,7 @@
 <td>Packet ID</td>
 </tr>
 <tr>
-<td>?</td>
+<td>1</td>
 <td>null_utf8</td>
 <td>Unknown hash</td>
 </tr>
