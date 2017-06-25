@@ -16,7 +16,7 @@
 <td>Packet ID</td>
 </tr>
 <td>1</td>
-<td>String</td>
+<td>null_utf8</td>
 <td>Nickname</td>
 </tr>
 <td>Last byte</td>
