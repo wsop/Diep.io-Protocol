@@ -16,7 +16,7 @@
 <td>Packet ID</td>
 </tr>
 <td>1</td>
-<td>null_utf8</td>
+<td>zero-terminated string, UTF8 encoding</td>
 <td>Nickname</td>
 </tr>
 <td>Packet Length</td>
@@ -131,7 +131,7 @@
 </tr>
 <tr>
 <td>1</td>
-<td>null_utf8</td>
+<td>zero-terminated string, UTF8 encoding</td>
 <td>Unknown hash</td>
 </tr>
 <tr>
@@ -314,7 +314,7 @@
 </tr>
 <tr>
 <td>1</td>
-<td>null_utf8</td>
+<td>zero-terminated string, UTF8 encoding</td>
 <td>Server country location or gamemode</td>
 </tr>
 </tbody></table>
