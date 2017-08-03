@@ -8,7 +8,7 @@ window.Diep = {
 function MessageFromClient(buf, offset) {
     var opcode = buf.readUInt8(offset);
     switch (opcode) {
-    	case 1 && Diep.debug.keys:
+    	case 1:
     		offset += 1;
     		var flag = buf.readUInt8(offset);
     		if (flag === 128) console.log("Stopped");
