@@ -10,7 +10,7 @@ function MessageFromClient(buf, offset) {
             for (var i = 0; i < buf.byteLength; i++) {
                 nick += String.fromCharCode(buf.readUInt8(i));
             }
-            Diep.nick = nick;
+            Diep.nick = nick.substr(1, nick.length - 1);
             console.log(Diep.nick + " spawned");
     }
 }
@@ -28,8 +28,8 @@ window.WebSocket.prototype.send = function(data) {
             var s_offset = 0;
             MessageFromServer(new Buffer(a.data), offset++);
         });
+        window.WebSocket.prototype._send.apply(this, arguments);
     } catch (e) {
         throw e;
     }
-    window.WebSocket.prototype._send.apply(this, arguments);
 };
