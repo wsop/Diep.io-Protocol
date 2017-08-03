@@ -1,6 +1,6 @@
 window.Diep = {
 	debug: {
-    	keys: false
+    	keys: true
     },
     nick: ""
 };
@@ -24,9 +24,9 @@ function MessageFromClient(buf, offset) {
         case 2:
             var nick = "";
             for (var i = 0; i < buf.byteLength; i++) {
-                nick += String.fromCharCode(buf.readUInt8(i));
+                nick += String.fromCharCode(buf.readUInt8(i) & 0xFF);
             }
-            Diep.nick = nick.substr(1, nick.length - 1);
+            Diep.nick = nick.substr(1, nick.length - 2);
             console.log(Diep.nick + " spawned");
     }
 }
@@ -42,7 +42,7 @@ window.WebSocket.prototype.send = function(data) {
         MessageFromClient(new Buffer(data), offset++);
         this.addEventListener("message", function(a) {
             var s_offset = 0;
-            MessageFromServer(new Buffer(a.data), offset++);
+            MessageFromServer(new Buffer(a.data), s_offset++);
         });
         window.WebSocket.prototype._send.apply(this, arguments);
     } catch (e) {
