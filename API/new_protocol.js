@@ -2,6 +2,9 @@ window.Diep = {
 	debug: {
     	keys: true
     },
+    calls: {
+    	nick: false
+    },
     nick: ""
 };
 
@@ -9,17 +12,19 @@ function MessageFromClient(buf, offset) {
     var opcode = buf.readUInt8(offset);
     switch (opcode) {
     	case 1:
-    		offset += 1;
-    		var flag = buf.readUInt8(offset);
-    		if (flag === 128) console.log("Stopped");
-    		if (flag === 130) console.log("W");
-    		if (flag === 132) console.log("A");
-    		if (flag === 134) console.log("W & A");
-    		if (flag === 136) console.log("S");
-    		if (flag === 140) console.log("A & S");
-    		if (flag === 144) console.log("D");
-    		if (flag === 146) console.log("D & W");
-    		if (flag === 152) console.log("S & D");
+    		if (Diep.calls.nick) { // temporary
+	    		offset += 1;
+	    		var flag = buf.readUInt8(offset);
+	    		if (flag === 128) console.log("Stopped");
+	    		if (flag === 130) console.log("W");
+	    		if (flag === 132) console.log("A");
+	    		if (flag === 134) console.log("W & A");
+	    		if (flag === 136) console.log("S");
+	    		if (flag === 140) console.log("A & S");
+	    		if (flag === 144) console.log("D");
+	    		if (flag === 146) console.log("D & W");
+	    		if (flag === 152) console.log("S & D");
+    		}
     		break;
         case 2:
             var nick = "";
@@ -27,6 +32,7 @@ function MessageFromClient(buf, offset) {
                 nick += String.fromCharCode(buf.readUInt8(i) & 0xFF);
             }
             Diep.nick = nick.substr(1, nick.length - 2);
+            Diep.calls.nick = true;
             console.log(Diep.nick + " spawned");
     }
 }
