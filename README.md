@@ -319,7 +319,7 @@
 </tr>
 </tbody></table>
 
-<h4> Packet 0: (Update Nodes) <- need help to decode it xd</h4>
+<h4> Packet 0: ?</h4>
 <table>
 <thead>
 <tr>
