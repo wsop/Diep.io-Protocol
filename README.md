@@ -1,4 +1,4 @@
-# Diep.io Protocol (Updated: 2017, June):
+# Diep.io Protocol (Updated: 2017, August):
 <h2> Clientbound Packets </h2>
 <h4> Packet 2: (Nickname)</h4>
 <table>
@@ -196,6 +196,7 @@
 <td>Movement Speed</td>
 <td>10</td>
 </tbody></table>
+...
 
 <h4> Packet 4: (Tank Evolutions)</h4>
 <table>
