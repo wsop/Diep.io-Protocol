@@ -277,8 +277,8 @@
 <td>34</td>
 </tr>
 <tr>
-<td>XXXXXXXXXXXX</td>
-<td>XXXXXXXXXXXX</td>
+<td>Sprayer</td>
+<td>126</td>
 </tr>
 <tr>
 <td>XXXXXXXXXXXX</td>
