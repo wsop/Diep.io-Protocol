@@ -1,5 +1,5 @@
 window.Diep = {
-	debug: {
+    debug: {
     	keys: true
     },
     calls: {
