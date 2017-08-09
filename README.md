@@ -236,10 +236,10 @@
 <td>40</td>
 </tr>
 <td>Machine Gun</td>
-<td>42</td>
+<td>74</td>
 </tr>
 <td>Flank Guard</td>
-<td>52</td>
+<td>84</td>
 </tr>
 <td>Triple Shot</td>
 <td>34</td>
@@ -281,12 +281,12 @@
 <td>126</td>
 </tr>
 <tr>
-<td>XXXXXXXXXXXX</td>
-<td>XXXXXXXXXXXX</td>
+<td>Destroyer</td>
+<td>80</td>
 </tr>
 <tr>
-<td>XXXXXXXXXXXX</td>
-<td>XXXXXXXXXXXX</td>
+<td>Skimmer</td>
+<td>40</td>
 </tr>
 <tr>
 <td>XXXXXXXXXXXX</td>
