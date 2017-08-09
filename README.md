@@ -2,7 +2,6 @@
 Diep.io:
  - is compiled with asm.js
  - protocol auto updates (every month) and makes this protocol outdated because some packets like tank upgrades or skills change
- - uses unsigned Int8 char as packet
 <h2> Clientbound Packets </h2>
 <h4> Packet 2: (Nickname)</h4>
 <table>
