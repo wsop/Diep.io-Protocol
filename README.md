@@ -27,6 +27,23 @@ Diep.io:
 <td>0</td>
 </tbody></table>
 
+```
+//The init key is a hash we don't know and it changes every certain time
+function initKey(str) {
+    	var view = new Buffer(1 + str.length + 4);
+	    var offset = 0;
+	    view.writeUInt8(0, 0);
+	    offset += 1;
+	    for (var i = 0; i < str.length; i++) {
+	        view.writeUInt8(str.charCodeAt(i), offset);
+	        offset += 1;
+	    }
+	    view.writeUInt32LE(0, offset);
+	    offset += 4;
+	    return view;
+	}
+```
+
 <h4> Packet 5: Server Response</h4>
 <table>
 <thead>
