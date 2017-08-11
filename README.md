@@ -385,6 +385,23 @@ function initKey(str) {
 </tr>
 </tbody></table>
 
+<h4> Packet 2: ? (sometimes leaderboard info)</h4>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+</tbody></table>
+
 <h4> Packet 0: ?</h4>
 <table>
 <thead>
