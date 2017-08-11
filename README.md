@@ -81,39 +81,39 @@ Diep.io:
 <tbody>
 <tr>
 <td>Stop movement (default)</td>
-<td>128 (+1 if AutoFire is ON)</td>
+<td>128</td>
 </tr>
 <tr>
 <td>W</td>
-<td>130 (+1 if AutoFire is ON)</td>
+<td>130</td>
 </tr>
 <tr>
 <td>A</td>
-<td>132 (+1 if AutoFire is ON)</td>
+<td>132</td>
 </tr>
 <tr>
 <td>S</td>
-<td>136 (+1 if AutoFire is ON)</td>
+<td>136</td>
 </tr>
 <tr>
 <td>D</td>
-<td>144 (+1 if AutoFire is ON)</td>
+<td>144</td>
 </tr>
 <tr>
 <td>W & A</td>
-<td>134 (+1 if AutoFire is ON)</td>
+<td>134</td>
 </tr>
 <tr>
 <td>A & S</td>
-<td>140 (+1 if AutoFire is ON)</td>
+<td>140</td>
 </tr>
 <tr>
 <td>S & D</td>
-<td>152 (+1 if AutoFire is ON)</td>
+<td>152</td>
 </tr>
 <tr>
 <td>D & W</td>
-<td>146 (+1 if AutoFire is ON)</td>
+<td>146</td>
 </tr>
 </tbody></table>
 
