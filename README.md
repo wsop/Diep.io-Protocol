@@ -396,9 +396,9 @@ function initKey(str) {
 </thead>
 <tbody>
 <tr>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>0</td>
+<td>Uint8</td>
+<td>packet id</td>
 </tr>
 </tbody></table>
 
