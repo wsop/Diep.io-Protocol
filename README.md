@@ -144,7 +144,7 @@ Diep.io:
 </tr>
 </tbody></table>
 
-```
+```javascript
 //The init key is a hash we don't know and it changes every certain time
 function initKey(str) {
     var view = new Buffer(1 + str.length + 4);
