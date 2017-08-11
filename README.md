@@ -402,6 +402,31 @@ function initKey(str) {
 </tr>
 </tbody></table>
 
+```javascript
+function decodeLeaderboard(bytes) {
+    const leaderboard = [];
+    const maxLength = bytes[29];
+    let length = 0;
+    let offset = 0;
+    if (bytes[offset] == 2) {
+        bytes = bytes.slice(29);
+        do {
+            let name = "";
+            let char = null;
+            while (true) {
+                char = bytes[offset];
+                offset += 1;
+                if (char === 0) break;
+                name += String.fromCharCode(char);
+            }
+            leaderboard.push(name);
+            length += 1;
+        } while (length < maxLength);
+    }
+    if (leaderboard.length === 10) return leaderboard;
+}
+```
+
 <h4> Packet 0: ?</h4>
 <table>
 <thead>
