@@ -438,8 +438,18 @@ function decodeLeaderboard(bytes) {
 </thead>
 <tbody>
 <tr>
+<td>0</td>
+<td>uint8</td>
+<td>opcode</td>
+</tr>
+<tr>
 <td>?</td>
 <td>?</td>
 <td>?</td>
+</tr>
+<tr>
+<td>byte length</td>
+<td>uint8</td>
+<td>1</td>
 </tr>
 </tbody></table>
