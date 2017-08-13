@@ -427,7 +427,7 @@ function decodeLeaderboard(bytes) {
 }
 ```
 
-<h4> Packet 0: ?</h4>
+<h4> Packet 0: ? ()</h4>
 <table>
 <thead>
 <tr>
@@ -445,7 +445,9 @@ function decodeLeaderboard(bytes) {
 <tr>
 <td>1 to 2</td>
 <td>uint8</td>
-<td>if ((offset1 & 255) === 0) offset2 += 1</td>
+<td>offset1 += 1 everytime packet is received;
+ 
+ if ((offset1 & 255) === 0) offset2 += 1</td>
 </tr>
 <tr>
 <td>byte length</td>
