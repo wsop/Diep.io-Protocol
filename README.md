@@ -341,12 +341,12 @@ function initKey(str) {
 <td>byte 7</td>
 </tr>
 <tr>
-<td>0</td>
+<td>1</td>
 <td>Uint8</td>
 <td>byte 226 (ban?)</td>
 </tr>
  <tr>
-<td>0</td>
+<td>2</td>
 <td>Uint8</td>
 <td>byte 1</td>
 </tr>
