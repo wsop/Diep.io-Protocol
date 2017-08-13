@@ -457,12 +457,11 @@ function decodeLeaderboard(bytes) {
 </tbody></table>
 
 ```javascript
-function decodeTimesReceived(a, b) {
-    a &= 255;
-    b &= 255;
-    if (b === 0) return a;
-    
+function decodeTimesReceived(arr) {
+    var out = "";
+    arr[0] &= 255;
+    arr[1] &= 255;
+    if (arr[1] === 0) return arr[0];
+    return arr[0] + ((arr[1] << 8) - 2);
 }
-
-decodeTimesReceived([1, 2]);
 ```
