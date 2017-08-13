@@ -405,6 +405,11 @@ function initKey(str) {
 <td>uint32</td>
 <td>top 10 score</td>
 </tr>
+<tr>
+<td>?</td>
+<td>uint32</td>
+<td>server uptime (ms)</td>
+</tr>
 </tbody></table>
 
 ```javascript
