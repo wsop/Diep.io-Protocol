@@ -1,6 +1,5 @@
 # Diep.io Protocol (Updated: 2017, August):
 Diep.io:
- - is compiled with asm.js
  - protocol auto updates (every month) and makes this protocol outdated because some packets like tank upgrades or skills change
 <h2> Serverbound Packets </h2>
 <h4> Packet 2: (Nickname)</h4>
