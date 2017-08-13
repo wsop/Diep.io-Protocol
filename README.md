@@ -443,9 +443,9 @@ function decodeLeaderboard(bytes) {
 <td>opcode</td>
 </tr>
 <tr>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>1 to 2</td>
+<td>uint8</td>
+<td>if ((offset1 & 255) === 0) offset2 += 1</td>
 </tr>
 <tr>
 <td>byte length</td>
