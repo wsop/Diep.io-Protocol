@@ -152,7 +152,7 @@ function initKey(str) {
     view.writeUInt8(0, 0);
     offset += 1;
     for (var i = 0; i < str.length; i++) {
-        view.writeUInt8(str.charCodeAt(i), offset);
+        view.writeUInt8(str.charCodeAt(i) & 255, offset);
         offset += 1;
     }
     view.writeUInt32LE(0, offset);
