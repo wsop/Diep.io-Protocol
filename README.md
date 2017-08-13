@@ -400,6 +400,11 @@ function initKey(str) {
 <td>Uint8</td>
 <td>packet id</td>
 </tr>
+<tr>
+<td>?</td>
+<td>uint32</td>
+<td>top 10 score</td>
+</tr>
 </tbody></table>
 
 ```javascript
