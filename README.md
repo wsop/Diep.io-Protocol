@@ -455,3 +455,14 @@ function decodeLeaderboard(bytes) {
 <td>1</td>
 </tr>
 </tbody></table>
+
+```javascript
+function decodeTimesReceived(a, b) {
+    a &= 255;
+    b &= 255;
+    if (b === 0) return a;
+    
+}
+
+decodeTimesReceived([1, 2]);
+```
