@@ -325,6 +325,33 @@ function initKey(str) {
 </tr>
 </tbody></table>
 
+<h4> Packet 7: (Ban warning event)</h4>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Uint8</td>
+<td>byte 7</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Uint8</td>
+<td>byte 226 (ban?)</td>
+</tr>
+ <tr>
+<td>0</td>
+<td>Uint8</td>
+<td>byte 1</td>
+</tr>
+</tbody></table>
+
 
 <h2> Clientbound Packets </h2>
 
