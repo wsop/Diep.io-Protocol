@@ -444,10 +444,8 @@ function decodeLeaderboard(bytes) {
 </tr>
 <tr>
 <td>1 to 2</td>
-<td>uint8</td>
-<td>offset1 += 1 everytime packet is received;
- 
- if ((offset1 & 255) === 0) offset2 += 1</td>
+<td>uint16</td>
+<td>offset1 += 1 everytime packet is received</td>
 </tr>
 <tr>
 <td>byte length</td>
@@ -455,13 +453,3 @@ function decodeLeaderboard(bytes) {
 <td>1</td>
 </tr>
 </tbody></table>
-
-```javascript
-function decodeTimesReceived(arr) {
-    var out = "";
-    arr[0] &= 255;
-    arr[1] &= 255;
-    if (arr[1] === 0) return arr[0];
-    return arr[0] + ((arr[1] << 8) - 2);
-}
-```
