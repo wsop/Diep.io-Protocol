@@ -412,7 +412,7 @@ function initKey(str) {
 </tbody></table>
 
 <h4> Packet 2: ? (it can contain lb or spawn or death info)</h4>
-Update Leaderboard
+<h3>Update Leaderboard</h3>
 <table>
 <thead>
 <tr>
@@ -436,6 +436,37 @@ Update Leaderboard
 <td>?</td>
 <td>uint32</td>
 <td>server uptime (ms)</td>
+</tr>
+</tbody></table>
+<h3>User spawned ?</h3>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>?</td>
+<td>uint8</td>
+<td>byte 62</td>
+</tr>
+<tr>
+<td>? to 3</td>
+<td>null</td>
+<td>null_string</td>
+</tr>
+<tr>
+<td>1 + ? + 3</td>
+<td>uint8</td>
+<td>byte 65</td>
+</tr>
+<tr>
+<td>2 + ? + 3</td>
+<td>zero-terminated string, UTF8 encoding</td>
+<td>nickname of user joined</td>
 </tr>
 </tbody></table>
 
