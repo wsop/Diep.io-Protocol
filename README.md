@@ -412,7 +412,7 @@ function initKey(str) {
 </tbody></table>
 
 <h4> Packet 2: ? (it can contain lb or spawn or death info)</h4>
-<h3>Update Leaderboard</h3>
+<h6>Update Leaderboard</h6>
 <table>
 <thead>
 <tr>
@@ -438,7 +438,8 @@ function initKey(str) {
 <td>server uptime (ms)</td>
 </tr>
 </tbody></table>
-<h3>User spawned ?</h3>
+
+<h6>User spawned ?</h6>
 <table>
 <thead>
 <tr>
