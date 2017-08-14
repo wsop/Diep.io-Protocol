@@ -411,7 +411,8 @@ function initKey(str) {
 </tr>
 </tbody></table>
 
-<h4> Packet 2: ? (sometimes leaderboard info)</h4>
+<h4> Packet 2: ? (it can contain lb or spawn or death info)</h4>
+Update Leaderboard
 <table>
 <thead>
 <tr>
