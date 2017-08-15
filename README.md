@@ -496,6 +496,33 @@ function decodeLeaderboard(bytes) {
 </tr>
 </tbody></table>
 
+<h6>User death ?</h6>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>?</td>
+<td>uint8</td>
+<td>byte 4</td>
+</tr>
+<tr>
+<td>? + 1</td>
+<td>zero-terminated string, UTF8 encoding</td>
+<td>Nickname of killer</td>
+</tr>
+<tr>
+<td>1 + ? + nick</td>
+<td>uint8</td>
+<td>3 bytes with value 1</td>
+</tr>
+</tbody></table>
+
 <h4> Packet 0: ? ()</h4>
 <table>
 <thead>
