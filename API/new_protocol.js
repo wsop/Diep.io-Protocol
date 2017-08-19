@@ -46,6 +46,12 @@ function MessageFromClient(buf, offset) {
             Diep.nick = nick.substr(1, nick.length - 2);
             Diep.calls.nick = true;
             console.log(Diep.nick + " spawned");
+            break;
+        case 7:
+            if (buf.readUInt8(1) === 226 && 1 === buf.readUInt8(2)) {
+                console.log("Received packet 7. Extension detected");
+            }
+            break;
     }
 }
 
