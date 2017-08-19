@@ -1,9 +1,9 @@
 window.Diep = {
     debug: {
-    	keys: true
+        keys: true
     },
     calls: {
-    	nick: false
+        nick: false
     },
     nick: ""
 };
@@ -11,24 +11,36 @@ window.Diep = {
 function MessageFromClient(buf, offset) {
     var opcode = buf.readUInt8(offset);
     switch (opcode) {
-    	case 1:
-    		if (Diep.calls.nick) { // temporary
-	    		offset += 1;
-	    		var flag = buf.readUInt8(offset);
-	    		if (flag === 128) console.log("Stopped");
-	    		if (flag === 130) console.log("W");
-	    		if (flag === 132) console.log("A");
-	    		if (flag === 134) console.log("W & A");
-	    		if (flag === 136) console.log("S");
-	    		if (flag === 140) console.log("A & S");
-	    		if (flag === 144) console.log("D");
-	    		if (flag === 146) console.log("D & W");
-	    		if (flag === 152) console.log("S & D");
-    		}
-    		break;
+        case 0:
+            var hash = "";
+            for (var i = 0; i < buf.byteLength; i++) {
+                while (true) {
+                    var char = buf.readUInt8(i);
+                    if (char === 0) break;
+                    hash += String.fromCharCode(char);
+                    i += 1;
+                }
+            }
+            console.log("Received packet 0 with hash: " + hash);
+            break;
+        case 1:
+            if (Diep.calls.nick) { // temporary
+                offset += 1;
+                var flag = buf.readUInt8(offset);
+                if (flag === 128) console.log("Stopped");
+                if (flag === 130) console.log("W");
+                if (flag === 132) console.log("A");
+                if (flag === 134) console.log("W & A");
+                if (flag === 136) console.log("S");
+                if (flag === 140) console.log("A & S");
+                if (flag === 144) console.log("D");
+                if (flag === 146) console.log("D & W");
+                if (flag === 152) console.log("S & D");
+            }
+            break;
         case 2:
             var nick = "";
-            for (var i = 0; i < buf.byteLength; i++) {
+            for (i = 0; i < buf.byteLength; i++) {
                 nick += String.fromCharCode(buf.readUInt8(i) & 0xFF);
             }
             Diep.nick = nick.substr(1, nick.length - 2);
