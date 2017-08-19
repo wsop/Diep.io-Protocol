@@ -325,7 +325,7 @@ function initKey(str) {
 </tr>
 </tbody></table>
 
-<h4> Packet 7: (Ban warning event)</h4>
+<h4> Packet 7: (Extension detected)</h4>
 <table>
 <thead>
 <tr>
