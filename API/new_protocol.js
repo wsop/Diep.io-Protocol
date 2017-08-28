@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
-// @author       You
+// @author       Faber
 // @match        diep.io
 // @require      http://cdn.rawgit.com/xF4b3r/Diep.io-Protocol/master/API/Buffer.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
@@ -39,15 +39,15 @@ function MessageFromClient(buf, offset) {
             if (Diep.calls.nick) { // temporary
                 offset += 1;
                 var flag = buf.readUInt8(offset);
-                if (flag === 128) console.log("Stopped");
-                if (flag === 130) console.log("W");
-                if (flag === 132) console.log("A");
-                if (flag === 134) console.log("W & A");
-                if (flag === 136) console.log("S");
-                if (flag === 140) console.log("A & S");
-                if (flag === 144) console.log("D");
-                if (flag === 146) console.log("D & W");
-                if (flag === 152) console.log("S & D");
+                if (flag === 128) setMovement("Stopped");
+                if (flag === 130) setMovement("W");
+                if (flag === 132) setMovement("A");
+                if (flag === 134) setMovement("W & A");
+                if (flag === 136) setMovement("S");
+                if (flag === 140) setMovement("A & S");
+                if (flag === 144) setMovement("D");
+                if (flag === 146) setMovement("D & W");
+                if (flag === 152) setMovement("S & D");
             }
             break;
         case 2:
@@ -86,8 +86,12 @@ window.WebSocket.prototype.send = function(data) {
     }
 };
 
+function setMovement(status) {
+    $("#p_movement").text("Movement: " + status);
+}
+
 function AddInfoPanel() {
-    $("#canvas").after('<div id="wPanel" style="width: 250px;height: 400px;border: 1px solid black;background: rgba(43, 106, 178, 0.77);position: absolute;margin: 15px;"><div id="p_content" style="margin: 15px;"><span style="font-family:ubuntu">Diep.io Protocol Extension</span></div></div>');
+    $("#canvas").after('<div id="wPanel" style="width: 250px;height: 400px;border: 1px solid black;background: rgba(43, 106, 178, 0.77);position: absolute;margin: 15px;"><div id="p_content" style="margin: 15px;font-family: ubuntu;"><p style="margin-bottom: 15px">Diep.io Protocol Extension</p><p id="p_movement">Movement: </p></div></div>');
     $("#wPanel").draggable();
 }
 
