@@ -1,3 +1,15 @@
+// ==UserScript==
+// @name         Diep.io protocol
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        diep.io
+// @require      http://cdn.rawgit.com/xF4b3r/Diep.io-Protocol/master/API/Buffer.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
+// @require      https://code.jquery.com/ui/1.12.1/jquery-ui.js
+// ==/UserScript==
+
 window.Diep = {
     debug: {
         keys: true
@@ -58,7 +70,7 @@ function MessageFromClient(buf, offset) {
 function MessageFromServer(buf) {
 
 }
-/*
+
 window.WebSocket.prototype._send = window.WebSocket.prototype.send;
 window.WebSocket.prototype.send = function(data) {
     try {
@@ -74,35 +86,11 @@ window.WebSocket.prototype.send = function(data) {
     }
 };
 
+function AddInfoPanel() {
+    $("#canvas").after('<div id="wPanel" style="width: 250px;height: 400px;border: 1px solid black;background: rgba(43, 106, 178, 0.77);position: absolute;margin: 15px;"><div id="p_content" style="margin: 15px;"><span style="font-family:ubuntu">Diep.io Protocol Extension</span></div></div>');
+    $("#wPanel").draggable();
+}
 
-var called = false;
-window.WebSocket.prototype._send = window.WebSocket.prototype.send;
-window.WebSocket.prototype.send = function(data) {
-	this.addEventListener("message", function(msg) {
-		var buf = new Buffer(msg.data);
-		var offset = 0;
-		var s_offset = 0;
-		var txt = "";
-		for (var j = 0; j < buf.byteLength; j++) txt += String.fromCharCode(buf[j]);
-    	if (buf[0] === 0) {
-			for (var i = 0; i < buf.byteLength; i++) {
-				offset += 1;
-				if (buf[i] === 51 && buf[i + 1] === 51) {
-					offset += 128;
-					if (buf.readUInt8(offset) === 65) {
-						buf = buf.slice(offset, buf.byteLength).reverse();
-						for (var r = 0; r < buf.byteLength; r++) {
-							if (buf[r] === 7 && buf[r + 1] === 192 && buf[r + 2] === 0 && buf[r + 3] === 0 && buf[r + 4] === 0 && buf[r + 5] === 0 && buf[r + 6] === 0 && buf[r + 7] === 0) {
-								buf = buf.slice(s_offset + 10, buf.byteLength - 1).reverse();
-                                console.log(buf.toString() + " spawned");
-                                called = true;
-                            }
-							s_offset += 1;
-						}
-                    }
-                }
-			}
-        }
-	});
-	window.WebSocket.prototype._send.apply(this, arguments);
-};*/
+window.jQuery(document).ready(function() {
+    AddInfoPanel();
+});
