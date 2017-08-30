@@ -16,7 +16,6 @@ if (!("Decoder" in window)) {
                 }
             }
             return this.str;
-
         }
     };
 }
