@@ -2,7 +2,6 @@ if (!("Decoder" in window)) {
     this.Decoder = class {
         constructor(buffer) {
             this.buffer = buffer;
-            this.str = "";
         }
         null_str() {
             this.str = "";
