@@ -41,7 +41,7 @@
 </tr>
 </tbody></table>
 
-<h4> Packet 1: (Mouse move position)</h4>
+<h4> Packet 1: (target position)</h4>
 <table>
 <thead>
 <tr>
