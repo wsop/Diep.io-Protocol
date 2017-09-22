@@ -68,8 +68,7 @@ window.WebSocket = function(url, protocols) {
     }.bind(this);
 
     ws.onmessage = function(event) {
-
-
+        ServerToClient(event.data);
         if (this.onmessage)
             return this.onmessage.call(ws, event);
     }.bind(this);
