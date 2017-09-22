@@ -1,3 +1,35 @@
+<h4>Upgrades</h4>
+<table>
+<thead>
+<tr>
+<th>Upgrade Name</th>
+<th>Byte ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Health Regen</td>
+<td>2</td>
+</tr>
+<td>Max Health</td>
+<td>4</td>
+</tr>
+<td>Body Damage</td>
+<td>2</td>
+</tr>
+<td>Bullet Speed</td>
+<td>0</td>
+</tr>
+<td>Bullet Penetration</td>
+<td>14</td>
+</tr>
+<td>Bullet Damage</td>
+<td>12</td>
+</tr>
+<td>Movement Speed</td>
+<td>10</td>
+</tbody></table>
+
 # Diep.io Protocol (Updated: 2017, August):
 <h2> Serverbound Packets </h2>
 <h4> Packet 2: (Nickname)</h4>
