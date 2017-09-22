@@ -1,14 +1,24 @@
 // ==UserScript==
-// @name         Diep.io protocol
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
+// @name         Diep.io WebSocket Protocol
+// @version      1.1
 // @author       Faber & TheGexi
-// @match        diep.io
+// @match        http://diep.io/
+// @grant        none
 // ==/UserScript==
 
-_WebSocket = window.WebSocket;
+function ClientToServer(data) {
+    data = new Int8Array(data);
+    var buf = new DataView(data.buffer);
+    if (buf.getUint8(0) === 3) {
+        console.log(data);
+    }
+}
 
+function ServerToClient(data) {
+
+}
+
+_WebSocket = window.WebSocket;
 function refer(master, slave, prop) {
     Object.defineProperty(master, prop, {
         get: function(){
@@ -20,7 +30,7 @@ function refer(master, slave, prop) {
         enumerable: true,
         configurable: true
     });
-};
+}
 
 window.WebSocket = function(url, protocols) {
     console.log('Listen', url, protocols);
@@ -39,11 +49,7 @@ window.WebSocket = function(url, protocols) {
     refer(this, ws, 'url');
 
     this.send = function(data) {
-        data = new Int8Array(data);
-        var buf = new DataView(data.buffer);
-        if (buf.getUint8(0) === 3) {
-            console.log(data);
-        }
+        ClientToServer(data);
         return ws.send.call(ws, data);
     };
 
