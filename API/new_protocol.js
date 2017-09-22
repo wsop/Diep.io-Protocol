@@ -3,22 +3,11 @@
 // @version      1.1
 // @author       Faber & TheGexi
 // @match        http://diep.io/
-// @run-at       document-start
+// @run-at       document-idle
 // ==/UserScript==
 
-function ClientToServer(data) {
-    data = new Int8Array(data);
-    var buf = new DataView(data.buffer);
-    if (buf.getUint8(0) === 3) {
-        console.log(data);
-    }
-}
-
-function ServerToClient(data) {
-
-}
-
 _WebSocket = window.WebSocket;
+
 function refer(master, slave, prop) {
     Object.defineProperty(master, prop, {
         get: function(){
@@ -49,7 +38,22 @@ window.WebSocket = function(url, protocols) {
     refer(this, ws, 'url');
 
     this.send = function(data) {
-        ClientToServer(data);
+        data = new Int8Array(data);
+        var buf = new DataView(data.buffer);
+        var opcode = buf.getInt8(0);
+        switch (opcode) {
+            case 3:
+                var flag = buf.getInt8(1);
+                if (flag === 0) console.log("Upgraded Max Health");
+                if (flag === 2) console.log("Upgraded Health Regen");
+                if (flag === 4) console.log("Upgraded Bullet Speed");
+                if (flag === 6) console.log("Upgraded Body Damage");
+                if (flag === 8) console.log("Upgraded Bullet Damage");
+                if (flag === 10) console.log("Upgraded Bullet Penetration");
+                if (flag === 12) console.log("Upgraded Movement Speed");
+                if (flag === 14) console.log("Upgraded Reload");
+                break;
+        }
         return ws.send.call(ws, data);
     };
 
@@ -68,8 +72,6 @@ window.WebSocket = function(url, protocols) {
     }.bind(this);
 
     ws.onmessage = function(event) {
-        ServerToClient(event.data);
-
         if (this.onmessage)
             return this.onmessage.call(ws, event);
     }.bind(this);
