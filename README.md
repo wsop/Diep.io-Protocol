@@ -8,11 +8,11 @@
 </thead>
 <tbody>
 <tr>
-<td>Health Regen</td>
-<td>2</td>
-</tr>
 <td>Max Health</td>
 <td>0</td>
+</tr>
+<td>Health Regen</td>
+<td>2</td>
 </tr>
 <td>Body Damage</td>
 <td>6</td>
