@@ -12,22 +12,22 @@
 <td>2</td>
 </tr>
 <td>Max Health</td>
-<td>4</td>
-</tr>
-<td>Body Damage</td>
-<td>2</td>
-</tr>
-<td>Bullet Speed</td>
 <td>0</td>
 </tr>
+<td>Body Damage</td>
+<td>6</td>
+</tr>
+<td>Bullet Speed</td>
+<td>4</td>
+</tr>
 <td>Bullet Penetration</td>
-<td>14</td>
+<td>10</td>
 </tr>
 <td>Bullet Damage</td>
-<td>12</td>
+<td>8</td>
 </tr>
-<td>Movement Speed</td>
-<td>10</td>
+<td>Reload</td>
+<td>14</td>
 </tbody></table>
 
 # Diep.io Protocol (Updated: 2017, August):
