@@ -14,11 +14,11 @@
 <td>Health Regen</td>
 <td>2</td>
 </tr>
-<td>Body Damage</td>
-<td>6</td>
-</tr>
 <td>Bullet Speed</td>
 <td>4</td>
+</tr>
+<td>Body Damage</td>
+<td>6</td>
 </tr>
 <td>Bullet Penetration</td>
 <td>10</td>
