@@ -170,15 +170,15 @@ function initKey(str) {
 <tbody>
 <tr>
 <td>0</td>
-<td>Uint8</td>
+<td>Int8</td>
 <td>Packet ID</td>
 </tr>
 <td>1</td>
-<td>Uint8</td>
+<td>Int8</td>
 <td>Selected Upgrade</td>
 <tr>
 <td>2</td>
-<td>Uint8</td>
+<td>Int8</td>
 <td>1</td>
 </tbody></table>
 
@@ -193,7 +193,7 @@ function initKey(str) {
 <tbody>
 <tr>
 <td>Health Regen</td>
-<td>6</td>
+<td>2</td>
 </tr>
 <td>Max Health</td>
 <td>4</td>
