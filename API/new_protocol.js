@@ -3,7 +3,7 @@
 // @version      1.1
 // @author       Faber & TheGexi
 // @match        http://diep.io/
-// @grant        none
+// @run-at       document-start
 // ==/UserScript==
 
 function ClientToServer(data) {
@@ -69,6 +69,7 @@ window.WebSocket = function(url, protocols) {
 
     ws.onmessage = function(event) {
         ServerToClient(event.data);
+
         if (this.onmessage)
             return this.onmessage.call(ws, event);
     }.bind(this);
