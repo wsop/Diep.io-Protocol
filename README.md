@@ -1,39 +1,3 @@
-<h4>Upgrades</h4>
-<table>
-<thead>
-<tr>
-<th>Upgrade Name</th>
-<th>Byte ID</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Max Health</td>
-<td>0</td>
-</tr>
-<td>Health Regen</td>
-<td>2</td>
-</tr>
-<td>Bullet Speed</td>
-<td>4</td>
-</tr>
-<td>Body Damage</td>
-<td>6</td>
-</tr>
-<td>Bullet Damage</td>
-<td>8</td>
-</tr>
-<td>Bullet Penetration</td>
-<td>10</td>
-</tr>
-<td>Movement Speed</td>
-<td>12</td>
-</tr>
-<td>Reload</td>
-<td>14</td>
-</tr>
-</tbody></table>
-
 # Diep.io Protocol (Updated: 2017, August):
 <h2> Serverbound Packets </h2>
 <h4> Packet 2: (Nickname)</h4>
@@ -218,8 +182,42 @@ function initKey(str) {
 <td>1</td>
 </tbody></table>
 
-// UPGRADES
-...
+<h4>Upgrades</h4>
+<table>
+<thead>
+<tr>
+<th>Upgrade Name</th>
+<th>Byte ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Max Health</td>
+<td>0</td>
+</tr>
+<td>Health Regen</td>
+<td>2</td>
+</tr>
+<td>Bullet Speed</td>
+<td>4</td>
+</tr>
+<td>Body Damage</td>
+<td>6</td>
+</tr>
+<td>Bullet Damage</td>
+<td>8</td>
+</tr>
+<td>Bullet Penetration</td>
+<td>10</td>
+</tr>
+<td>Movement Speed</td>
+<td>12</td>
+</tr>
+<td>Reload</td>
+<td>14</td>
+</tr>
+</tbody></table>
+
 
 <h4> Packet 4: (Tank Evolutions)</h4>
 <table>
