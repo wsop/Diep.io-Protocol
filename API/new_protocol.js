@@ -1,12 +1,4 @@
-// ==UserScript==
-// @name         Diep.io WebSocket Protocol
-// @version      1.1
-// @author       Faber & TheGexi
-// @match        http://diep.io/
-// @run-at       document-idle
-// ==/UserScript==
-
-_WebSocket = window.WebSocket;
+var _WebSocket = window.WebSocket;
 
 function refer(master, slave, prop) {
     Object.defineProperty(master, prop, {
@@ -22,8 +14,6 @@ function refer(master, slave, prop) {
 }
 
 window.WebSocket = function(url, protocols) {
-    console.log('Listen', url, protocols);
-
     if (protocols === undefined) {
         protocols = [];
     }
