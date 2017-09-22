@@ -20,11 +20,11 @@
 <td>Body Damage</td>
 <td>6</td>
 </tr>
-<td>Bullet Penetration</td>
-<td>10</td>
-</tr>
 <td>Bullet Damage</td>
 <td>8</td>
+</tr>
+<td>Bullet Penetration</td>
+<td>10</td>
 </tr>
 <td>Reload</td>
 <td>14</td>
