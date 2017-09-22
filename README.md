@@ -29,9 +29,8 @@
 <td>Reload</td>
 <td>14</td>
 </tr>
-<td>Movement Speed/td>
+<td>Movement Speed</td>
 <td>12</td>
-</tbody></table>
 </tbody></table>
 
 # Diep.io Protocol (Updated: 2017, August):
