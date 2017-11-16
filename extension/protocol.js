@@ -89,6 +89,8 @@ window.WebSocket = function(url, protocols) {
             case 7:
                 console.log("Message >> Connection to server established");
                 break;
+            case 8:
+                console.log("Message >> Packet 8: " + new TextDecoder("utf-8").decode(event.data));
         }
 
         if (this.onmessage)
