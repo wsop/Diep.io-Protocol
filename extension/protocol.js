@@ -1,3 +1,5 @@
+window.sas = 1;
+
 var _WebSocket = window.WebSocket;
 
 function refer(master, slave, prop) {
@@ -56,7 +58,7 @@ window.WebSocket = function(url, protocols) {
         var opcode = buffer.getUint8(0);
         switch (opcode) {
             case 0:
-                console.log(buffer.getUint16(1));
+                //console.log(buffer.getUint16(1));
                 break;
             case 2:
                 if (buffer.getUint8(5) === 245) {
@@ -84,15 +86,17 @@ window.WebSocket = function(url, protocols) {
                 console.log("Message >> Got server region: " + new TextDecoder("utf-8").decode(event.data))
                 break;
             case 5:
-                // packet 5 is a connection keep-alive
+                // packet 5: connection keep-alive
                 break;
             case 7:
                 console.log("Message >> Connection to server established");
                 break;
             case 8:
-            	console.log("Message >> Packet 8: " + new TextDecoder("utf-8").decode(event.data));
+                console.log("Message >> Packet 8: " + new TextDecoder("utf-8").decode(event.data));
+                break;
             default:
                 console.log(bytes);
+                break;
         }
 
         if (this.onmessage)
