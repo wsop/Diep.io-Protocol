@@ -83,6 +83,9 @@ window.WebSocket = function(url, protocols) {
             case 4:
                 console.log("Message >> Got server region: " + new TextDecoder("utf-8").decode(event.data))
                 break;
+            case 5:
+                // packet 5 is a connection keep-alive
+                break;
         }
 
         if (this.onmessage)
