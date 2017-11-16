@@ -10,8 +10,10 @@
 
 var Protocol = "http://cdn.rawgit.com/xF4b3r/Diep.io-Protocol/master/extension/protocol.js";
 
-var localProtocol = "http://localhost/!diep.io/protocol.js";
-var localDebug = true;
+function loadScript(x) {
+    x = x.replace("</body>", "<script src='" + Protocol + "'></script></body>");
+    return x;
+}
 
 window.stop();
 document.documentElement.innerHTML = "";
@@ -19,9 +21,9 @@ GM_xmlhttpRequest({
     method : "GET",
     url : "http://diep.io/",
     onload : function(e) {
-        e.responseText = e.responseText.replace("</body>", "<script src='" + localDebug ? localProtocol : Protocol + "'></script></body>");
+        var doc = loadScript(e.responseText);
         document.open();
-        document.write(e.responseText);
+        document.write(doc);
         document.close();
     }
 });
