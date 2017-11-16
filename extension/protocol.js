@@ -29,7 +29,10 @@ window.WebSocket = function(url, protocols) {
     this.send = function(data) {
         data = new Int8Array(data);
         var buffer = new DataView(data.buffer);
-        
+        //console.log(buffer)
+        if (buffer.getInt8(0) === 1 && buffer.length === 10) {
+            //console.log(buffer.getInt16(7));
+        }
         return ws.send.call(ws, data);
     };
 
