@@ -86,6 +86,9 @@ window.WebSocket = function(url, protocols) {
             case 5:
                 // packet 5 is a connection keep-alive
                 break;
+            case 7:
+                console.log("Message >> Connection to server established");
+                break;
         }
 
         if (this.onmessage)
