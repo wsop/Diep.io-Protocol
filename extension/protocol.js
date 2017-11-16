@@ -48,6 +48,7 @@ window.WebSocket = function(url, protocols) {
     this.onmessage = function(event) {};
 
     ws.onopen = function(event) {
+        console.log("Connection opened!");
         if (this.onopen)
             return this.onopen.call(ws, event);
     }.bind(this);
