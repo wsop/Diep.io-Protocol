@@ -58,6 +58,29 @@ window.WebSocket = function(url, protocols) {
             case 0:
                 console.log(buffer.getUint16(1));
                 break;
+            case 2:
+                if (buffer.getUint8(5) === 245) {
+                    var leaderboard = [];
+                    var maxLength = bytes[112];
+                    var length = 0;
+                    var offset = 0;
+                    bytes = bytes.slice(112);
+                    do {
+                        var name = "";
+                        var char = null;
+                        while (true) {
+                            char = bytes[offset];
+                            offset += 1;
+                            if (char === 0) break;
+                            name += String.fromCharCode(char);
+                        }
+                        leaderboard.push(name);
+                        length += 1;
+                    } while (length < maxLength);
+                    console.log(leaderboard.slice(0, 10));
+                }
+                break;
+            
         }
 
         if (this.onmessage)
