@@ -52,7 +52,9 @@ window.WebSocket = function(url, protocols) {
 
     ws.onmessage = function(event) {
         var buffer = new DataView(event.data);
-
+        var bytes = new Uint8Array(buffer.buffer);
+        var opcode = buffer.getUint8(0);
+        
         if (this.onmessage)
             return this.onmessage.call(ws, event);
     }.bind(this);
