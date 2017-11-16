@@ -27,11 +27,18 @@ window.WebSocket = function(url, protocols) {
     refer(this, ws, 'url');
 
     this.send = function(data) {
-        data = new Int8Array(data);
-        var buffer = new DataView(data.buffer);
-        //console.log(buffer)
-        if (buffer.getInt8(0) === 1 && buffer.length === 10) {
-            //console.log(buffer.getInt16(7));
+        var buf = new DataView(new Int8Array(data).buffer);
+        var opcode = buf.getInt8(0);
+        switch (opcode) {
+            case 1:
+                console.log(data);
+                break;
+            case 5:
+
+                break;
+            default:
+
+                break;
         }
         return ws.send.call(ws, data);
     };
@@ -100,7 +107,6 @@ window.WebSocket = function(url, protocols) {
                 break;
             default:
                 console.log(bytes);
-                break;
         }
 
         if (this.onmessage)
