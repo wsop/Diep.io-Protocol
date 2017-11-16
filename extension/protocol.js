@@ -54,7 +54,12 @@ window.WebSocket = function(url, protocols) {
         var buffer = new DataView(event.data);
         var bytes = new Uint8Array(buffer.buffer);
         var opcode = buffer.getUint8(0);
-        
+        switch (opcode) {
+            case 0:
+                console.log(buffer.getUint16(1));
+                break;
+        }
+
         if (this.onmessage)
             return this.onmessage.call(ws, event);
     }.bind(this);
