@@ -87,11 +87,16 @@ window.WebSocket = function(url, protocols) {
             case 5:
                 // packet 5: connection keep-alive
                 break;
+            case 6:
+                console.log("Message >> Packet 6 (" + bytes.byteLength + "): " + new TextDecoder("utf-8").decode(event.data));
+                console.log(bytes);
+                break;
             case 7:
                 console.log("Message >> Connection to server established");
                 break;
             case 8:
-                console.log("Message >> Packet 8: " + new TextDecoder("utf-8").decode(event.data));
+                console.log("Message >> Packet 8 (" + bytes.byteLength + "): " + new TextDecoder("utf-8").decode(event.data));
+                console.log(bytes);
                 break;
             default:
                 console.log(bytes);
