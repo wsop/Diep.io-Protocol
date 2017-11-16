@@ -80,7 +80,9 @@ window.WebSocket = function(url, protocols) {
                     console.log(leaderboard.slice(0, 10));
                 }
                 break;
-            
+            case 4:
+                console.log("Message >> Got server region: " + new TextDecoder("utf-8").decode(event.data))
+                break;
         }
 
         if (this.onmessage)
