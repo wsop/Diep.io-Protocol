@@ -51,6 +51,7 @@ window.WebSocket = function(url, protocols) {
     }.bind(this);
 
     ws.onmessage = function(event) {
+        var buffer = new DataView(event.data);
 
         if (this.onmessage)
             return this.onmessage.call(ws, event);
