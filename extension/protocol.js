@@ -1,5 +1,3 @@
-window.sas = 1;
-
 var _WebSocket = window.WebSocket;
 
 function refer(master, slave, prop) {
