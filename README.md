@@ -115,31 +115,22 @@
 </tbody></table>
 
 <h4> Packet 0: (Init packet, sent when connection to server is established)</h4>
-<table>
-<thead>
-<tr>
-<th>Byte Offset</th>
-<th>Data Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Uint8</td>
-<td>Packet ID</td>
-</tr>
-<tr>
-<td>1</td>
-<td>zero-terminated string, UTF8 encoding</td>
-<td>Unknown hash</td>
-</tr>
-<tr>
-<td>?</td>
-<td>Uint32</td>
-<td>0</td>
-</tr>
-</tbody></table>
+
+| Byte Offset  | Data Type | Description |
+| ------------- | ------------- | ------------- |
+| 0  | Uint8  | Packet ID  |
+| 1  | zero-terminated utf-8 string  | Unknown hash  |
+| 1 + hash length  | Uint32 LE  | 0  |
+
+If party link:
+
+| Byte Offset  | Data Type | Description |
+| ------------- | ------------- | ------------- |
+| 0  | Uint8  | Packet ID  |
+| 1  | zero-terminated utf-8 string  | Unknown hash  |
+| 1 + hash length  | Uint16 LE  | 0  |
+| 1 + hash length + 1  | zero-terminated utf-8 string  | Party code  |
+| 1 + hash length + party length + 1  | Uint16 LE  | 0  |
 
 ```javascript
 function initKey(hash, partyCode) {
