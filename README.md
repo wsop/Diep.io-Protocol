@@ -142,19 +142,36 @@
 </tbody></table>
 
 ```javascript
-//The init key is a hash we don't know and it changes every certain time
-function initKey(str) {
-    var view = new Buffer(1 + str.length + 4);
-    var offset = 0;
-    view.writeUInt8(0, 0);
-    offset += 1;
-    for (var i = 0; i < str.length; i++) {
-        view.writeUInt8(str.charCodeAt(i), offset);
+function initKey(hash, partyCode) {
+    if (!partyCode) {
+        var buf = new Buffer(1 + hash.length + 4);
+        var offset = 0;
+        buf.writeUInt8(0, 0);
         offset += 1;
+        for (var i = 0; i < hash.length; i++) {
+            buf.writeUInt8(hash.charCodeAt(i), offset);
+            offset += 1;
+        }
+        buf.writeUInt32LE(0, offset);
+        offset += 4;
+        return buf;
+    } else {
+        var buf = new Buffer(1 + hash.length + partyCode.length + 4);
+        var offset = 0;
+        buf.writeUInt8(0, 0);
+        offset += 1;
+        for (var i = 0; i < hash.length; i++) {
+            buf.writeUInt8(hash.charCodeAt(i), offset);
+            offset += 1;
+        }
+        buf.writeUInt16LE(0, offset);
+        offset += 2;
+        for (var i = 0; i < partyCode.length; i++) {
+            buf.writeUInt8(partyCode.charCodeAt(i), offset);
+            offset += 1;
+        }
+        return buf;
     }
-    view.writeUInt32LE(0, offset);
-    offset += 4;
-    return view;
 }
 ```
 
