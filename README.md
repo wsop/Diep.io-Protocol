@@ -453,6 +453,10 @@ function decodeLeaderboard(bytes) {
 </tr>
 </tbody></table>
 
+<h4> Packet 3: Client Message (e.g: "You've killed X")</h4>
+
+im lazy
+
 <h4> Packet 0: ? ()</h4>
 <table>
 <thead>
