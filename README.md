@@ -166,87 +166,34 @@ function initKey(hash, partyCode) {
 }
 ```
 
+
 <h4> Packet 3: (Upgrade Skills)</h4>
-<table>
-<thead>
-<tr>
-<th>Byte Offset</th>
-<th>Data Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Int8</td>
-<td>Packet ID</td>
-</tr>
-<td>1</td>
-<td>Int8</td>
-<td>Selected Upgrade</td>
-<tr>
-<td>2</td>
-<td>Int8</td>
-<td>1</td>
-</tbody></table>
+
+| Byte Offset  | Data Type | Description |
+| ------------- | ------------- | ------------- |
+| 0  | Int8  | Packet ID  |
+| 1  | Int8  | Selected Upgrade  |
+| 2  | Int8  | 1  |
 
 <h4>Upgrades</h4>
-<table>
-<thead>
-<tr>
-<th>Upgrade Name</th>
-<th>Byte ID</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Max Health</td>
-<td>0</td>
-</tr>
-<td>Health Regen</td>
-<td>2</td>
-</tr>
-<td>Bullet Speed</td>
-<td>4</td>
-</tr>
-<td>Body Damage</td>
-<td>6</td>
-</tr>
-<td>Bullet Damage</td>
-<td>8</td>
-</tr>
-<td>Bullet Penetration</td>
-<td>10</td>
-</tr>
-<td>Movement Speed</td>
-<td>12</td>
-</tr>
-<td>Reload</td>
-<td>14</td>
-</tr>
-</tbody></table>
 
+| Upgrade Name  | Byte ID |
+| ------------- | ------------- |
+| Max Health  | 0  |
+| Health Regen  | 2  |
+| Bullet Speed  | 4  |
+| Body Damage  | 6  |
+| Bullet Damage  | 8  |
+| Bullet Penetration  | 10  |
+| Movement Speed  | 12  |
+| Reload  | 14  |
 
 <h4> Packet 4: (Tank Evolutions)</h4>
-<table>
-<thead>
-<tr>
-<th>Byte Offset</th>
-<th>Data Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Uint8</td>
-<td>Packet ID</td>
-</tr>
-<td>1</td>
-<td>Uint8</td>
-<td>Tank Type</td>
-<tr>
-</tbody></table>
+
+| Byte Offset  | Data Type | Description |
+| ------------- | ------------- | ------------- |
+| 0  | Int8  | Packet ID  |
+| 1  | Int8  | Tank Type  |
 
 <h4>Tank Evolutions</h4>
 <table>
