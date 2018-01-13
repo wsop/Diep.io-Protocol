@@ -179,14 +179,14 @@ function initKey(hash, partyCode) {
 
 | Upgrade Name  | Byte ID |
 | ------------- | ------------- |
-| Max Health  | 0  |
-| Health Regen  | 2  |
-| Bullet Speed  | 4  |
-| Body Damage  | 6  |
-| Bullet Damage  | 8  |
-| Bullet Penetration  | 10  |
-| Movement Speed  | 12  |
-| Reload  | 14  |
+| Reload  | 0  |
+| Movement Speed  | 2  |
+| Bullet Penetration  | 4  |
+| Bullet Damage  | 6  |
+| Body Damage  | 8  |
+| Bullet Speed  | 10  |
+| Health Regen  | 12  |
+| Max Health  | 14  |
 
 <h4> Packet 4: (Tank Evolutions)</h4>
 
