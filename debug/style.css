@@ -1,0 +1,31 @@
+#pcontent {
+    user-select: none;
+    overflow-x: auto;
+    position: absolute;
+    z-index: 9999;
+    font-family: Consolas;
+    padding: 20px;
+    width: 500px;
+    height: 500px;
+    border-radius: 4px;
+    background: #0b0d0eed;
+}
+
+.pnum {
+    color: #676061;
+    font-size: 20px;
+    padding-right: 15px;
+    border-right: 2px solid #929191;
+}
+
+.pline {
+    color: #b45b3b;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.pall {
+    margin-bottom: 10px;
+    padding-left: 2.4em;
+    text-indent: -2.4em;
+}
