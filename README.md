@@ -17,8 +17,7 @@
 | ------------- | ------------- | ------------- |
 | 0 | Uint8 | Packet ID |
 | 1 | NTS | Latest version's hash |
-| 1 + Hash length | Uint8 | Byte 0 |
-| 1 + Hash length + 1 | NTS | Party Code (if exists) |
+| 1 + Hash length + 2 | NTS | Party Code (if exists) |
 
 ```javascript
 function initKey(hash, partyCode) {
