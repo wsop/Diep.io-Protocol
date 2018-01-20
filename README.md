@@ -62,4 +62,13 @@ function initKey(hash, partyCode) {
 | Health Regen  | 12  |
 | Max Health  | 14  |
 
+----------
+
+| Byte Offset  | Data Type | Description |
+| ------------- | ------------- | ------------- |
+| 0  | Uint8  | Packet ID  |
+| 1  | Uint8  | Tank Type  |
+
+
+
 ## Serverbound communication
